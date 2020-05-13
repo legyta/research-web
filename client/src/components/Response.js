@@ -19,9 +19,9 @@ export class ProductDetails extends Component {
     });
   };
 
-  handleSubmitResponse = (id, values) => {
-    console.log(values);
-    responseHelper(selectedArticleReducer.id, values);
+  handleSubmitResponse = (values) => {
+    const { article: {article_id} } = this.props;
+    responseHelper({article_id, ...values});
   };
 
   render() {
