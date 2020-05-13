@@ -1,0 +1,13 @@
+.response-image {
+  width: 60%;
+  height: 60%;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.response-likes {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,8 @@
+.response-shares {
+  display: flex;
+  flex-direction: row;
+}
+
+.response-shares .label .input[type="checkbox" i] {
+  padding: 1rem;
+}
