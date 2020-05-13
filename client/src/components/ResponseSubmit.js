@@ -13,7 +13,7 @@ function ResponseSubmit(props) {
   const { handleSubmit } = props;
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit} className="responseSubmit-form">
       <div className="response-shares">
         <div className="field">
           <div className="control">
@@ -101,11 +101,13 @@ function ResponseSubmit(props) {
         </div>
       </div>
 
-      <div className="field">
+      <div className="trust-field">
         <div className="control">
-          <label className="label">trust</label>
+          <label className="label">
+            How much do you trust this news story?
+          </label>
           <Field
-            className="input"
+            className="trust-input"
             name="trust"
             component="input"
             type="number"
@@ -114,11 +116,13 @@ function ResponseSubmit(props) {
         </div>
       </div>
 
-      <div className="field">
+      <div className="quality-field">
         <div className="control">
-          <label className="label">quality</label>
+          <label className="label">
+            What do you think of this article’s quality?
+          </label>
           <Field
-            className="input"
+            className="quality-input"
             name="quality"
             component="input"
             type="number"

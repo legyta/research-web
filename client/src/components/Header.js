@@ -14,7 +14,7 @@ function Header() {
         <li>| Royal family |</li>
         <li>Tech |</li>
         <li>Culture & Media |</li>
-        <li>Remarkable |</li>
+        <li>Remarkable </li>
         <input className="header-search" type="text" placeholder="Search 🔍" />
       </ul>
       <div className="header-news">
