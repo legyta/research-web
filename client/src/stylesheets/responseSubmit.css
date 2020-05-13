@@ -1,3 +1,10 @@
+.responseSubmit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .response-shares {
   display: flex;
   flex-direction: row;
@@ -5,4 +12,19 @@
 
 .response-shares .label .input[type="checkbox" i] {
   padding: 1rem;
+}
+
+.trust-input {
+  margin-left: 23px;
+  width: 20%;
+}
+
+.quality-input {
+  margin-left: 10px;
+  width: 20%;
+}
+
+.trust-field {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }

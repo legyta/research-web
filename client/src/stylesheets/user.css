@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.user-main {
+  margin: 40px 40px 0px 40px;
+}
+.user-main h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.user-form {
+  margin-top: 40px;
+}
+
+.user-form label {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.user-main button {
+  background-color: #d5a129;
+  height: 30px;
+  width: 90px;
+  margin-left: 20px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #9b4e23;
+  transition: opacity 0.6s ease-out 0.6s;
+}
+
+.user-main button:hover {
+  background-color: initial;
+  transition: 0.5s;
+}

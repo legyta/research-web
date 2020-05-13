@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #e6ecff;
+  background-color: #d4cdc4;
   height: 15vh;
   margin-top: 0px;
 }
@@ -11,6 +11,7 @@
 ul {
   list-style-type: none;
   margin-bottom: 40px;
+  padding-left: 190px;
 }
 
 li {
@@ -21,31 +22,16 @@ li {
   color: red;
 }
 
-.orb-nav-search .orb-search__button {
-  cursor: pointer;
-  border: none;
-  overflow: hidden;
-  text-indent: -999px;
-  display: block;
-  line-height: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 16px 16px;
-  width: 20px;
-  height: 20px;
-  background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png");
-}
-
 .header-search {
   width: 6%;
-  padding-left: 0.6rem;
+  padding-left: 0.3rem;
+  margin-left: 20px;
 }
 
 .header-news {
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
+  margin: 40px 0px 40px 0px;
 }
 
 .header-h1 {
@@ -55,5 +41,5 @@ li {
 .header-h2 {
   margin-left: 20px;
   margin-top: 30px;
-  color: #83858b;
+  color: #d5a129;
 }

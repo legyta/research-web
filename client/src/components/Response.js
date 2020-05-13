@@ -7,7 +7,7 @@ import responseHelper from "../helper/responseHelper";
 import Header from "./Header";
 import ResponseSubmit from "./ResponseSubmit";
 import selectedArticleReducer from "../reducers/selectedArticleReducer";
-
+import { GrLike } from "react-social-icons";
 export class ProductDetails extends Component {
   state = {
     isReadMoreMounted: false,
@@ -42,17 +42,17 @@ export class ProductDetails extends Component {
                 src={this.props.article.url}
                 alt=""
               />
-              <h2>{this.props.article.caption}</h2>
+              <p className="response-caption">{this.props.article.caption}</p>
             </div>
 
             <div className="response-likes">
-              <h2>{this.props.article.likes}</h2>
-              <h2>{this.props.article.posts}</h2>
-              <h2>{this.props.article.shares}</h2>
+              <p>👍 {this.props.article.likes} |</p>
+              <p> {this.props.article.posts} |</p>
+              <p>{this.props.article.shares}</p>
             </div>
 
             <div className="response-text">
-              <h2>{this.props.article.text}</h2>
+              <p>{this.props.article.text}</p>
             </div>
           </div>
         </div>
