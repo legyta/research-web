@@ -1,19 +1,35 @@
 import React from "react";
-import { reduxForm, Field } from "redux-form";
-import { Link } from "react-router-dom";
-import responseSubmit from "../stylesheets/responseSubmit.css";
+import { Field, reduxForm } from "redux-form";
+import Slider from "rc-slider/lib/Slider";
+import "rc-slider/assets/index.css";
 import { SocialIcon } from "react-social-icons";
-import { useSelector } from "react-redux";
+import responseSubmit from "../stylesheets/responseSubmit.css";
 
-function ResponseSubmit(props) {
-  // const selectedArticleReducer = useSelector((store) => {
-  //   return store.selectedArticleReducer;
-  // });
+const ReduxSlider = (props) => {
+  const {
+    input: { value, onChange },
+  } = props;
+  return (
+    <Slider
+      value={props.input.value}
+      onChange={props.input.onChange}
+      {...props}
+    />
+  );
+};
 
+export const ResponseSubmit = (props) => {
   const { handleSubmit } = props;
 
+  const rangeProps = {
+    pushable: true,
+    allowCross: false,
+    min: 0,
+    max: 100,
+    step: 1,
+  };
   return (
-    <div className="response-submit-container">
+    <section className="response-submit-container">
       <form onSubmit={handleSubmit} className="responseSubmit-form">
         <div className="response-shares">
           <div className="field">
@@ -107,49 +123,26 @@ function ResponseSubmit(props) {
             <label className="label">
               How much do you trust this news story?
             </label>
-            <Field
-              className="trust-input"
-              name="trust"
-              component="input"
-              type="number"
-              placeholder="trust"
-            />
+
+            <Field name="trust" component={ReduxSlider} props={rangeProps} />
           </div>
         </div>
 
-        <div className="quality-field">
+        <div className="trust-field">
           <div className="control">
             <label className="label">
               What do you think of this article’s quality?
             </label>
-            <Field
-              className="quality-input"
-              name="quality"
-              component="input"
-              type="number"
-              placeholder="quality"
-            />
+            <Field name="quality" component={ReduxSlider} props={rangeProps} />
           </div>
         </div>
 
-        {/* <div className="field">
-        <div className="control">
-          <button className="button is-link">Submit</button>
-        </div>
-      </div> */}
-
-        {/* <button onSubmit={handleSubmit}>submit</button> */}
-
-        <button type="submit" onClick={() => (window.location = "/articles")}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
-    </div>
+    </section>
   );
-}
+};
 
-ResponseSubmit = reduxForm({
+export default reduxForm({
   form: "response",
 })(ResponseSubmit);
-
-export default ResponseSubmit;

@@ -8,6 +8,7 @@ import Header from "./Header";
 import ResponseSubmit from "./ResponseSubmit";
 import selectedArticleReducer from "../reducers/selectedArticleReducer";
 import { GrLike } from "react-social-icons";
+
 export class ProductDetails extends Component {
   state = {
     isReadMoreMounted: false,
@@ -23,8 +24,7 @@ export class ProductDetails extends Component {
     const {
       article: { article_id },
     } = this.props;
-    // console.log({ article_id, ...values });
-    // responseHelper({ article_id, ...values });
+
     console.log({ article_id, ...values });
     responseHelper({ article_id, ...values });
   };
@@ -88,22 +88,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(ProductDetails);
-
-//OPTION FOR NUMBER SELECT
-
-{
-  /* 
-      <div className="field">
-        <div className="control">
-          <label className="label">Proficiency</label>
-          <div className="select">
-            <Field className="input" name="proficiency" component="select">
-              <option />
-              <option value="beginner">1</option>
-              <option value="intermediate">2</option>
-              <option value="expert">3</option>
-            </Field>
-          </div>
-        </div>
-      </div> */
-}
