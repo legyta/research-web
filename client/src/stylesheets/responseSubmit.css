@@ -1,8 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+.response-submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
 .responseSubmit-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: brown;
+  padding: 30px;
+  width: 80%;
 }
 
 .response-shares {
@@ -27,4 +43,22 @@
 .trust-field {
   margin-top: 40px;
   margin-bottom: 20px;
+}
+
+.responseSubmit-form button {
+  background-color: #d5a129;
+  height: 30px;
+  width: 90px;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: #9b4e23;
+  transition: opacity 0.6s ease-out 0.6s;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.responseSubmit-form button:hover {
+  background-color: initial;
+  transition: 0.5s;
 }

@@ -20,8 +20,13 @@ export class ProductDetails extends Component {
   };
 
   handleSubmitResponse = (values) => {
-    const { article: {article_id} } = this.props;
-    responseHelper({article_id, ...values});
+    const {
+      article: { article_id },
+    } = this.props;
+    // console.log({ article_id, ...values });
+    // responseHelper({ article_id, ...values });
+    console.log({ article_id, ...values });
+    responseHelper({ article_id, ...values });
   };
 
   render() {
@@ -34,7 +39,7 @@ export class ProductDetails extends Component {
         <div className="response-wrapper">
           <div className="response-information">
             <div className="response-content">
-              <h2>{this.props.article.title}</h2>
+              <h1>{this.props.article.title}</h1>
             </div>
             <div className="response-image">
               <img
@@ -42,13 +47,15 @@ export class ProductDetails extends Component {
                 src={this.props.article.url}
                 alt=""
               />
-              <p className="response-caption">{this.props.article.caption}</p>
+              <div className="response-caption">
+                <p>{this.props.article.caption}</p>
+              </div>
             </div>
 
             <div className="response-likes">
-              <p>👍 {this.props.article.likes} |</p>
-              <p> {this.props.article.posts} |</p>
-              <p>{this.props.article.shares}</p>
+              <p> {this.props.article.likes} 👍</p>
+              <p> {this.props.article.posts} </p>
+              <p> {this.props.article.shares}</p>
             </div>
 
             <div className="response-text">

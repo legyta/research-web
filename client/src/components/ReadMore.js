@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-//import "../stylesheets/popup.scss";
+import "../stylesheets/readmore.css";
 
 export default class ReadMore extends Component {
   render() {
-    return <div className="popup--wrapper">{this.props.read}</div>;
+    return <div className="readmore-wrapper">{this.props.read}</div>;
   }
 }

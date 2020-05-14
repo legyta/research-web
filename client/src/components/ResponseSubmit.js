@@ -6,135 +6,145 @@ import { SocialIcon } from "react-social-icons";
 import { useSelector } from "react-redux";
 
 function ResponseSubmit(props) {
-  const selectedArticleReducer = useSelector((store) => {
-    return store.selectedArticleReducer;
-  });
+  // const selectedArticleReducer = useSelector((store) => {
+  //   return store.selectedArticleReducer;
+  // });
 
   const { handleSubmit } = props;
 
   return (
-    <form onSubmit={handleSubmit} className="responseSubmit-form">
-      <div className="response-shares">
-        <div className="field">
-          <div className="control">
-            <label className="label">
-              Share this article:{" "}
-              <SocialIcon
-                network="twitter"
-                bgColor="transparent"
-                fgColor="#83858b"
-                style={{ height: 35, width: 35 }}
-              />{" "}
-              Twitter
-            </label>
-            <Field
-              className="input"
-              name="twitter"
-              component="input"
-              type="checkbox"
-              placeholder="twitter"
-            />
-          </div>
-        </div>
-
-        <div className="field">
-          <div className="control">
-            <label className="label">
-              <SocialIcon
-                network="facebook"
-                bgColor="transparent"
-                fgColor="#83858b"
-                style={{ height: 35, width: 35 }}
+    <div className="response-submit-container">
+      <form onSubmit={handleSubmit} className="responseSubmit-form">
+        <div className="response-shares">
+          <div className="field">
+            <div className="control">
+              <label className="label">
+                Share this article:{" "}
+                <SocialIcon
+                  network="twitter"
+                  bgColor="transparent"
+                  fgColor="#83858b"
+                  style={{ height: 35, width: 35 }}
+                />{" "}
+                Twitter
+              </label>
+              <Field
+                className="input"
+                name="twitter"
+                component="input"
+                type="checkbox"
+                placeholder="twitter"
               />
-              Facebook
-            </label>
-            <Field
-              className="input"
-              name="facebook"
-              component="input"
-              type="checkbox"
-              placeholder="facebook"
-            />
+            </div>
+          </div>
+
+          <div className="field">
+            <div className="control">
+              <label className="label">
+                <SocialIcon
+                  network="facebook"
+                  bgColor="transparent"
+                  fgColor="#83858b"
+                  style={{ height: 35, width: 35 }}
+                />
+                Facebook
+              </label>
+              <Field
+                className="input"
+                name="facebook"
+                component="input"
+                type="checkbox"
+                placeholder="facebook"
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <div className="control">
+              <label className="label">
+                <SocialIcon
+                  network="email"
+                  bgColor="transparent"
+                  fgColor="#83858b"
+                  style={{ height: 35, width: 35 }}
+                />
+                E-mail
+              </label>
+              <Field
+                className="input"
+                name="email"
+                component="input"
+                type="checkbox"
+                placeholder="email"
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <div className="control">
+              <label className="label">
+                <SocialIcon
+                  network="whatsapp"
+                  bgColor="transparent"
+                  fgColor="#83858b"
+                  style={{ height: 35, width: 35 }}
+                />
+                WhatsApp
+              </label>
+              <Field
+                className="input"
+                name="whatsapp"
+                component="input"
+                type="checkbox"
+                placeholder="whatsapp"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="field">
+        <div className="trust-field">
           <div className="control">
             <label className="label">
-              <SocialIcon
-                network="email"
-                bgColor="transparent"
-                fgColor="#83858b"
-                style={{ height: 35, width: 35 }}
-              />
-              E-mail
+              How much do you trust this news story?
             </label>
             <Field
-              className="input"
-              name="email"
+              className="trust-input"
+              name="trust"
               component="input"
-              type="checkbox"
-              placeholder="email"
+              type="number"
+              placeholder="trust"
             />
           </div>
         </div>
 
-        <div className="field">
+        <div className="quality-field">
           <div className="control">
             <label className="label">
-              <SocialIcon
-                network="whatsapp"
-                bgColor="transparent"
-                fgColor="#83858b"
-                style={{ height: 35, width: 35 }}
-              />
-              WhatsApp
+              What do you think of this article’s quality?
             </label>
             <Field
-              className="input"
-              name="whatsapp"
+              className="quality-input"
+              name="quality"
               component="input"
-              type="checkbox"
-              placeholder="whatsapp"
+              type="number"
+              placeholder="quality"
             />
           </div>
         </div>
-      </div>
 
-      <div className="trust-field">
+        {/* <div className="field">
         <div className="control">
-          <label className="label">
-            How much do you trust this news story?
-          </label>
-          <Field
-            className="trust-input"
-            name="trust"
-            component="input"
-            type="number"
-            placeholder="trust"
-          />
+          <button className="button is-link">Submit</button>
         </div>
-      </div>
+      </div> */}
 
-      <div className="quality-field">
-        <div className="control">
-          <label className="label">
-            What do you think of this article’s quality?
-          </label>
-          <Field
-            className="quality-input"
-            name="quality"
-            component="input"
-            type="number"
-            placeholder="quality"
-          />
-        </div>
-      </div>
+        {/* <button onSubmit={handleSubmit}>submit</button> */}
 
-      <button type="submit" onClick={() => (window.location = "/articles")}>
-        Submit
-      </button>
-    </form>
+        <button type="submit" onClick={() => (window.location = "/articles")}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
 

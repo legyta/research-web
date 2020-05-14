@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
 .response-wrapper {
   margin: 0px 40px 0px 40px;
+}
+
+form {
+  margin-top: 40px;
 }
 
 .response-information {
@@ -9,8 +16,10 @@
   justify-content: center;
 }
 
-.response-content h2 {
+.response-content h1 {
   margin-top: 2px;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.4rem;
 }
 
 .response-image {
@@ -21,8 +30,57 @@
   margin-bottom: 0px;
 }
 
-.response-image .response-caption p {
+.response-image {
+  width: 70%;
+  height: 70%;
+}
+
+.response-caption p {
   margin-top: 0px;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.response-likes {
+  display: flex;
+  justify-content: center;
+  background-color: #d4cdc4;
+  height: 80px;
+  width: 300px;
+  border-width: 0.1rem;
+  padding-left: 40px;
+}
+
+.response-likes p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+}
+
+.response-text p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
+}
+
+.response-text {
+  margin: 0px 300px;
+}
+
+.response-read button {
+  background-color: transparent;
+  height: 30px;
+  width: 140px;
+  border-width: 0.01rem;
+  border-style: solid;
+  border-color: #9b4e23;
+  transition: opacity 0.6s ease-out 0.6s;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+}
+
+.response-read button:hover {
+  background-color: #d5a129;
+  transition: 0.5s;
 }
 
 .response-read {
@@ -30,26 +88,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.response-image {
-  width: 70%;
-  height: 70%;
-}
-
-form {
-  margin-top: 40px;
-}
-
-.response-likes {
-  display: flex;
-  justify-content: center;
-  background-color: #d4cdc4;
-  height: 50px;
-  width: 300px;
-  border-width: 0.1rem;
-}
-
-.response-text {
-  margin: 0px 300px;
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
 }
