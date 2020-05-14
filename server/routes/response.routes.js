@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database/models");
 const response = db.response;
-
+const article = db.article;
 const { isAnswered } = require("../helpers");
 
 //POST DATA
 router.post("/", (req, res) => {
   const submittedData = req.body;
-
+  const articleId = req.body.article_id;
   //check if any answer passed
   isAnswered(submittedData) &&
     res.status(400).send({ message: "Please tell us your opinion" });
@@ -22,6 +22,7 @@ router.post("/", (req, res) => {
       whatsapp: req.body.whatsapp,
       trust: req.body.trust,
       quality: req.body.quality,
+      articleId: req.body.article_id,
     })
     .then((response) => res.status(200).send(response.dataValues))
     .catch((error) =>

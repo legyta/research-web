@@ -11,7 +11,6 @@ const { connector } = require("./database/models");
 
 //Importing the routes
 const responseRoute = require("./routes/response.routes");
-//const sharesRoute = require("./routes/shares.routes");
 const usersRoute = require("./routes/users.routes");
 const articlesRoute = require("./routes/articles.routes");
 
@@ -31,7 +30,6 @@ app.use(express.json());
 
 //Routes
 app.use("/response", responseRoute);
-//app.use("/shares", sharesRoute);
 app.use("/users", usersRoute);
 app.use("/articles", articlesRoute);
 
