@@ -120,20 +120,35 @@ export const ResponseSubmit = (props) => {
 
         <div className="trust-field">
           <div className="control">
-            <label className="label">
+            <label className="label-trust">
               How much do you trust this news story?
             </label>
-
             <Field name="trust" component={ReduxSlider} props={rangeProps} />
+          </div>
+          <div className="trust-little-much">
+            <div className="trust-little">
+              <label className="label">very little</label>
+            </div>
+            <div className="trust-much">
+              <label className="label">very much</label>
+            </div>
           </div>
         </div>
 
         <div className="trust-field">
           <div className="control">
-            <label className="label">
+            <label className="label-quality">
               What do you think of this article’s quality?
             </label>
             <Field name="quality" component={ReduxSlider} props={rangeProps} />
+          </div>
+          <div className="trust-little-much">
+            <div className="trust-little">
+              <label className="label">very poor</label>
+            </div>
+            <div className="trust-much">
+              <label className="label">very good</label>
+            </div>
           </div>
         </div>
 

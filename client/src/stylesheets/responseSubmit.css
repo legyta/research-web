@@ -45,6 +45,31 @@
   margin-bottom: 20px;
 }
 
+.trust-field .trust-little-much {
+  display: flex;
+  flex-direction: row;
+  width: 650px;
+}
+
+.label-trust {
+  color: brown;
+}
+.label-quality {
+  color: brown;
+}
+
+.trust-field .trust-little {
+  color: brown;
+}
+
+.trust-little-much .trust-little {
+  color: brown;
+}
+.trust-field .trust-much {
+  margin-left: 440px;
+  color: brown;
+}
+
 .responseSubmit-form button {
   background-color: #d5a129;
   height: 30px;

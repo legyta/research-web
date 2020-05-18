@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ArticlesList from "./ArticlesList";
 import applyFilter from "../helper/applyFilter";
-//import "../stylesheets/Articles.scss";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import responseHelper from "../helper/responseHelper";
 
 class Articles extends Component {
   handleSelectArticle = (article) => {
@@ -47,7 +45,6 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch({ type: "CHOOSE_FILTER", filter: category }),
   selectArticle: (article) =>
     dispatch({ type: "SELECT_ARTICLE", article: article }),
-
   submitForm: (response) => dispatch({ type: "SUBMIT_FORM", form: response }),
 });
 

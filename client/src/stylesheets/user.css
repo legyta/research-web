@@ -48,3 +48,8 @@
   background-color: initial;
   transition: 0.5s;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

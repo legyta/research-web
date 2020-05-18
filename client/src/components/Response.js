@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import ReadMore from "./ReadMore";
 import "../stylesheets/response.css";
 import { connect, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import responseHelper from "../helper/responseHelper";
 import Header from "./Header";
 import ResponseSubmit from "./ResponseSubmit";
 import selectedArticleReducer from "../reducers/selectedArticleReducer";
-import { GrLike } from "react-social-icons";
 
 export class ProductDetails extends Component {
   state = {
@@ -25,7 +23,6 @@ export class ProductDetails extends Component {
       article: { article_id },
     } = this.props;
 
-    console.log({ article_id, ...values });
     responseHelper({ article_id, ...values });
   };
 
@@ -84,6 +81,7 @@ export class ProductDetails extends Component {
 const mapStateToProps = (state) => {
   return {
     article: state.select.article,
+    user: state.select.user,
   };
 };
 

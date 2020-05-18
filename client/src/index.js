@@ -14,6 +14,7 @@ const store = createStore(
   allReducers,
   composeWithDevTools(applyMiddleware(thunk))
 );
+console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>

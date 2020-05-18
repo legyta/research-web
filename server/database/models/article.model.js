@@ -1,9 +1,5 @@
 module.exports = (Sequelize, connector) => {
-  const Article = connector.define("article", {
-    articleId: {
-      type: Sequelize.INTEGER,
-    },
-  });
+  const Article = connector.define("article", {});
 
   return Article;
 };

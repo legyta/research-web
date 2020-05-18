@@ -20,7 +20,11 @@ router.post("/", (req, res) => {
       gender: req.body.gender,
       education: req.body.education,
     })
-    .then((user) => res.status(200).send(user.dataValues))
+    .then((user) => {
+      console.log(user.dataValues);
+      res.status(200).send(user.dataValues);
+    })
+    // .then((user) => res.status(200).send(user.dataValues))
     .catch((error) =>
       res.status(500).send({
         message:
