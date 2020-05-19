@@ -23,11 +23,6 @@ db.response = require("./response.model")(Sequelize, connector);
 db.article = require("./article.model")(Sequelize, connector);
 
 //Setting up database relationship
-
-// db.user.hasMany(db.response);
-// db.response.belongsTo(db.article);
-
-db.user.belongsToMany(db.article, { through: db.response });
-db.article.belongsToMany(db.user, { through: db.response });
+db.user.hasMany(db.response, { foreignKey: "userId" });
 
 module.exports = db;
