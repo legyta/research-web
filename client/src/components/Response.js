@@ -21,9 +21,13 @@ export class ProductDetails extends Component {
   handleSubmitResponse = (values) => {
     const {
       article: { article_id },
+      user: { id: user_id },
     } = this.props;
 
-    responseHelper({ article_id, ...values });
+    responseHelper(
+      { article_id, user_id, ...values },
+      this.props.history.push("/articles")
+    );
   };
 
   render() {
@@ -81,7 +85,7 @@ export class ProductDetails extends Component {
 const mapStateToProps = (state) => {
   return {
     article: state.select.article,
-    user: state.select.user,
+    user: state.user.user,
   };
 };
 

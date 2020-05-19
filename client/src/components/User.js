@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import userHelper from "../helper/userHelper";
 import "../stylesheets/user.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 function User(props) {
@@ -13,6 +13,7 @@ function User(props) {
 
     userHelper(sendingtoServer).then((receivedfromServer) => {
       props.saveUser(receivedfromServer);
+      props.history.push("/articles");
     });
   }
 
@@ -67,9 +68,6 @@ function User(props) {
             <option value="doc">Doctorate</option>
           </select>
           <button> Start</button>
-          {/* <button type="submit">
-            <Link to="/articles">Start</Link>
-          </button> */}
         </div>
       </form>
     </main>
@@ -80,4 +78,4 @@ const mapDispatchToProps = (dispatch) => ({
   saveUser: (user) => dispatch({ type: "SAVE_USER", user: user }),
 });
 
-export default connect(null, mapDispatchToProps)(User);
+export default connect(null, mapDispatchToProps)(withRouter(User));

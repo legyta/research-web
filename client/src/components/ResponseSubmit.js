@@ -4,6 +4,7 @@ import Slider from "rc-slider/lib/Slider";
 import "rc-slider/assets/index.css";
 import { SocialIcon } from "react-social-icons";
 import responseSubmit from "../stylesheets/responseSubmit.css";
+import { Link, withRouter } from "react-router-dom";
 
 const ReduxSlider = (props) => {
   const {
@@ -151,8 +152,11 @@ export const ResponseSubmit = (props) => {
             </div>
           </div>
         </div>
+        <button>Submit</button>
 
-        <button type="submit">Submit</button>
+        {/* <button>
+          <Link to="/articles">Submit</Link>
+        </button> */}
       </form>
     </section>
   );
@@ -160,4 +164,4 @@ export const ResponseSubmit = (props) => {
 
 export default reduxForm({
   form: "response",
-})(ResponseSubmit);
+})(withRouter(ResponseSubmit));
