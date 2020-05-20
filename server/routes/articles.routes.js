@@ -4,7 +4,7 @@ const db = require("../database/models");
 const article = db.article;
 
 //Get
-router.get("/", (req, res) => {
+router.get("http://localhost:9000/.netlify/functions/api/users", (req, res) => {
   res.status(200).send("hallo from articles");
 });
 
