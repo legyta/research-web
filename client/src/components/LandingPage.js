@@ -7,6 +7,11 @@ function LandingPage() {
     <div>
       <main className="user-main">
         <h1>Welcome to our news website (under construction)</h1>
+        <h2>
+          Please open this website on your laptop or computer. <br /> For the
+          purposes of the experiment, you need to see the overview of the
+          articles, which will not be displayed fully on the mobile devices.
+        </h2>
         <p>
           In this mini-experiment we run, we wan to test how people rate the
           quality of news for our upcoming website focusing in the topic of the

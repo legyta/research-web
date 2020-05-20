@@ -10,6 +10,12 @@
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.user-main h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 .user-main p {
   font-family: "Karla", sans-serif;
   font-size: 1.4rem;
