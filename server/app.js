@@ -29,9 +29,9 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 //Routes
-app.use("/response", responseRoute);
-app.use("/users", usersRoute);
-app.use("/articles", articlesRoute);
+app.use("/.netlify/functions/response", responseRoute);
+app.use("/.netlify/functions/users", usersRoute);
+app.use("/.netlify/functions/articles", articlesRoute);
 
 app.use(logger("dev"));
 app.use(express.json());
