@@ -5,7 +5,9 @@
   "scripts": {
     "server": "nodemon ./bin/www",
     "client": "cd .. && cd client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "echo This runs afterwards."
   },
   "author": "ligita montvilaite",
   "license": "ISC",
@@ -13,12 +15,16 @@
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "heroku": "^7.41.1",
+    "install": "^0.13.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "node": "^14.0.0",
     "nodemon": "^2.0.3",
     "sequelize": "^5.21.7",
+    "snap": "^1.1.0",
+    "sudo": "^1.0.3",
     "uuid": "^8.0.0"
   }
 }
