@@ -13,11 +13,11 @@ The purpose of the web will be to track each users responses on articles' trust 
 ### Prerequisites
 
 Make sure you have react.js and node.js installed on your local machine. 
+You can find the instructions on how to set these up here: 
 
 ```
-You can find the instructions on how to set these up here: 
-* [React.js] (https://reactjs.org/)
-* [Node.js] (https://nodejs.org/en/)
+* [React.js](https://reactjs.org/) 
+* [Node.js](https://nodejs.org/en/) 
 ```
 
 ## Deployment
