@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReadMore from "./ReadMore";
+//import ReadMore from "./ReadMore";
 import "../stylesheets/response.css";
 import { connect, useSelector } from "react-redux";
 import responseHelper from "../helper/responseHelper";
@@ -61,6 +61,11 @@ export class ProductDetails extends Component {
 
             <div className="response-text">
               <p>{this.props.article.text}</p>
+              <p>{this.props.article.text1}</p>
+              <p>{this.props.article.text2}</p>
+              <p>{this.props.article.text3}</p>
+              <p>{this.props.article.text4}</p>
+              <p>{this.props.article.text5}</p>
             </div>
           </div>
         </div>
@@ -71,8 +76,13 @@ export class ProductDetails extends Component {
         </div>
         <div className="response-read">
           {this.state.isReadMoreMounted ? (
-            <div className="read">
-              <ReadMore read={this.props.article.read} />{" "}
+            <div className="readmore-wrapper">
+              <p>{this.props.article.read}</p>
+              <p>{this.props.article.read1}</p>
+              <p>{this.props.article.read2}</p>
+              <p>{this.props.article.read3}</p>
+              <p>{this.props.article.read4}</p>
+              <p>{this.props.article.read5}</p>
             </div>
           ) : null}
         </div>

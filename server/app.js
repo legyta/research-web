@@ -19,7 +19,6 @@ const app = express();
 
 //Connect database
 connector
-  // { force: true }
   .sync()
   .then(() => console.log("Tables for database created"))
   .catch((err) => console.error(`Oops, something failed: ${err}`));
@@ -46,6 +45,9 @@ app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get("env") === "development" ? err : {};
+  App.get("*", (req, res) => {
+    res.sendFile(path.resolve(where, the, index.html, is));
+  });
 
   // render the error page
   res.status(err.status || 500);
